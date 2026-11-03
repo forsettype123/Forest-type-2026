@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin - Matara TEC Forest Game</title>
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<div class="container">
+<header>
+<h1>ADMIN PANEL - Matara TEC</h1>
+<p>Forest Type 2026 - Open Day Management</p>
+<a href="index.html" class="back-btn">← Back to Game</a>
+</header>
+
+<div class="stats">
+<div class="stat-card"><h3 id="totalPlayers">0</h3><p>Total Players</p></div>
+<div class="stat-card"><h3 id="avgScore">0</h3><p>Average Score</p></div>
+<div class="stat-card"><h3 id="topScore">0</h3><p>Highest Score</p></div>
+</div>
+
+<div class="card">
+<div class="card-header">
+<h2>🏆 Leaderboard Management</h2>
+<div>
+<button onclick="refreshData()" class="btn btn-green">🔄 Refresh</button>
+<button onclick="clearLeaderboard()" class="btn btn-red">🗑️ Clear All</button>
+</div>
+</div>
+<div id="leaderboardTable"><p class="loading">Loading data from Firebase...</p></div>
+</div>
+
+<div class="card">
+<h2>🎮 Game Settings</h2>
+<div class="settings-grid">
+<div><label>Game Status:</label><span class="badge green">Online</span></div>
+<div><label>Firebase Project:</label><span>forest-type-2026</span></div>
+<div><label>GitHub Repo:</label><span>forsettype123/Forest-type-2026</span></div>
+</div>
+</div>
+</div>
+<script type="module" src="admin.js"></script>
+</body>
+</html>
